@@ -50,6 +50,7 @@ sass:
 
 # Replace this value and uncomment to enable Disqus
 # disqus: xxxxxx
+disqus_shortname: 'tommy16102.github.io'
 
 # Specify the author for blog posts
 author:
