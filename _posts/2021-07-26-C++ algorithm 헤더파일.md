@@ -11,7 +11,7 @@ date: 2021-07-26 12:53 +0900
 ---
 <pre>
 <code>
-#include << algorithm >>
+#include <algorithm>
 </code>
 </pre>
 
