@@ -47,6 +47,8 @@ int main() {
 }
 ```
 
+  
+  
 
 # Permutation
 ```
@@ -92,6 +94,9 @@ int main() {
 }
 ```
 
+  
+  
+  
 # Max/Min
 ```
 #include <iostream>
@@ -116,6 +121,8 @@ int main() {
 ```
 
 
+  
+  
 # Max_Element/Min_Element
 ```
 #include <iostream>
