@@ -10,9 +10,6 @@ categories:
 date: 2021-07-26 12:53 +0900
 ---
 
-  
-#include <algorithm>
-
 
 #Sort
 ```
