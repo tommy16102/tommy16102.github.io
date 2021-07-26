@@ -1,6 +1,6 @@
 ---
 layout: post
-title: C++ '\<'algorithm'\>' 헤더파일
+title: C++ \<algorithm\> 헤더파일
 author: Hyemin Seo
 comments: true
 tags:
