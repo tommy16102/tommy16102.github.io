@@ -1,6 +1,6 @@
 ---
 layout: post
-title: C++ <algorithm> 헤더파일
+title: "C++ algorithm 헤더파일"
 author: Hyemin Seo
 comments: true
 tags:
@@ -9,14 +9,9 @@ categories:
 - C++
 date: 2021-07-26 12:53 +0900
 ---
-<pre>
-<code>
-#include <algorithm>
-</code>
-</pre>
 
 
-#Sort
+# Sort
 ```
 #include <iostream>
 #include <algorithm>
@@ -52,8 +47,10 @@ int main() {
 }
 ```
 
+  
+  
 
-#Permutation
+# Permutation
 ```
 #include <iostream>
 #include <algorithm>
@@ -97,7 +94,10 @@ int main() {
 }
 ```
 
-#Max/Min
+  
+  
+  
+# Max/Min
 ```
 #include <iostream>
 #include <algorithm>
@@ -121,7 +121,9 @@ int main() {
 ```
 
 
-#Max_Element/Min_Element
+  
+  
+# Max_Element/Min_Element
 ```
 #include <iostream>
 #include <algorithm>
