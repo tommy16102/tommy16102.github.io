@@ -9,7 +9,7 @@ categories:
 - Javascript
 date: 2021-08-06 22:04 +0900
 ---
-
+```
 function func() {}
 -> func()
 
@@ -17,3 +17,4 @@ func = function() {}
 ->func()
 
 (function() {})()
+```
