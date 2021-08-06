@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Javascript 비교"
+title: "Javascript 비교 연산자"
 author: Hyemin Seo
 comments: true
 tags:
