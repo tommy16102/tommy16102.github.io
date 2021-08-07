@@ -9,6 +9,7 @@ categories:
 - Javascript
 date: 2021-08-06 23:04 +0900
 ---
+
 ```
 alert() -> 경고창
 
@@ -38,3 +39,19 @@ main.html
 </body>
 ...
 ```
+
+node.circle.js
+
+```
+var PI = Math.PI;
+exports.area = function(r) { return PI*r*r;}
+```
+
+node.demo.js
+
+```
+var res = require('./node.circle.js');
+console.log(res.area(5))
+```
+
+node node.demo.js 실행
