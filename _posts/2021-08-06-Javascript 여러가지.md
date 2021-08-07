@@ -17,3 +17,24 @@ prompt() -> 입력한 값 결과로
 document.write() -> 화면 출력
 
 ```
+
+# 모듈화
+
+hi.js
+
+```
+function hi(){alert('hi')}
+```
+
+main.html
+
+```
+...
+<head>
+  <script src = "hi.js"></script>
+</head>
+<body>
+  <script> hi() </script>
+</body>
+...
+```
