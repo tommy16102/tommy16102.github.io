@@ -63,5 +63,7 @@ sum2(1,2)//3
 //apply
 function func() {}
 func() //this -> window
+
+var a = {}
 func.apply(a) //this -> a
 ```
