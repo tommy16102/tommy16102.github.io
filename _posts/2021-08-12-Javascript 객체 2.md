@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Javascript 객체 생성자"
+title: "Javascript 객체 2"
 author: Hyemin Seo
 comments: true
 tags:
@@ -37,4 +37,31 @@ man.introduce(); //minsu
 var man2 = new Person("minho");
 man2.introduce();//minho
 
+
+//this window
+function func() {console.log(this)} //this는 window
+
+//this 객체
+var obj = { func: function() {if(this==obj) console.log(this)} } //this는 obj
+
+var funcThis;
+function Func() {
+	funcThis = this; 
+}
+
+var o1 = Func(); //funcThis == window
+var o2 = new Func(); //funcThis == o2
+
+
+//sum 함수 객체
+function sum(x,y) {return x+y;}
+sum(1,2)//3
+
+var sum2 = new Function('x','y','return x+y')
+sum2(1,2)//3
+
+//apply
+function func() {}
+func() //this -> window
+func.apply(a) //this -> a
 ```
