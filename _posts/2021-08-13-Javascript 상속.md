@@ -14,7 +14,7 @@ date: 2021-08-13 18:24 +0900
 function Person(name){
     this.name=name;
 }
-
+//prototype 상속을 받기위한 템플릿.
 //prototype 객체의 원형
 Person.prototype.name=null;
 Person.prototype.introduce=function(){
