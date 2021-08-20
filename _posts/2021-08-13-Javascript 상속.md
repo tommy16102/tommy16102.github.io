@@ -47,4 +47,17 @@ Designer.prototype.design = function(){
 var p3 = new Designer('ccc');
 document.write(p3.introduce());
 document.write(p3.design());
+
+function Brick() {
+  this.width = 10;
+  this.height = 20;
+}
+
+//width, height 속성 상속
+function BlueGlassBrick() {
+  Brick.call(this);
+
+  this.opacity = 0.5;
+  this.color = 'blue';
+}
 ```
