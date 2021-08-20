@@ -56,4 +56,6 @@ var res = require('./node.circle.js');
 console.log(res.area(5))
 ```
 
-node node.demo.js 실행
+node node.demo.js 실행  
+
+파라미터로 함수를 전달받아, 함수의 내부에서 실행하는 함수=>콜백함수
