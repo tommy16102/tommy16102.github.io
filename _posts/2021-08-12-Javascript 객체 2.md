@@ -32,6 +32,8 @@ function Person(name){
 }
 
 var man = new Person("minsu");
+man.constructor // function Person..
+
 man.introduce(); //minsu
 
 var man2 = new Person("minho");
