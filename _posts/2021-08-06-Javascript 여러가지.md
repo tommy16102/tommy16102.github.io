@@ -88,3 +88,6 @@ node node.demo.js 실행
 
 미래의 특정 시점에 값을 제공 하겠다는 약속을 반환=>promise
 ```
+
+![화면 캡처 2021-08-25 193832](https://user-images.githubusercontent.com/75344562/130776326-408fa602-4415-4917-86f1-e1ed57ee2e2f.png)
+
