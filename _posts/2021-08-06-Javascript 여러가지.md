@@ -17,6 +17,21 @@ var //지역 및 전역
 let //블록범위 지역변수
 
 const //블록범위 읽기 전용 상수
+
+var <-> let,const
+
+ex)
+var x=1;
+{
+ var x=2;
+}
+console.log(x); //2
+
+let x=1;
+{
+ let x=2;
+}
+console.log(x); //1
 ```
 
 # 기타
