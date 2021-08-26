@@ -35,3 +35,15 @@ a.sort() // ['b','c','e']
 a.reverse() // ['e','c','b']
 
 ```
+
+# for each
+```
+// 인자로 주어진 함수 => 배열의 각 요소에서 한번씩 실행됨.
+var colors = ['red', 'green', 'blue'];
+color.forEach(color => console.log(color));
+// red
+// green
+// blue
+```
+
+```
