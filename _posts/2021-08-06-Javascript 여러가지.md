@@ -93,3 +93,12 @@ pending: 초기, fulfill: 수행 o, reject: 수행 x, settled: fulfill/reject bu
 
 ![화면 캡처 2021-08-25 193832](https://user-images.githubusercontent.com/75344562/130776326-408fa602-4415-4917-86f1-e1ed57ee2e2f.png)
 
+# for each
+```
+// 인자로 주어진 함수 => 배열의 각 요소에서 한번씩 실행됨.
+var colors = ['red', 'green', 'blue'];
+color.forEach(color => console.log(color));
+// red
+// green
+// blue
+```
