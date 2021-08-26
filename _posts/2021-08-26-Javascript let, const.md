@@ -9,7 +9,7 @@ categories:
 - Javascript
 date: 2021-08-26 19:04 +0900
 ---
-# 선언
+# 선언 let, const
 
 ```
 var //지역 및 전역
@@ -49,3 +49,12 @@ let b=3;
 //반면 let은 선언, 초기화가 분리되어 있음. => 초기화는 변수 선언문에 도달했을 때 이뤄짐. 초기화 전 변수 접근->에러
 //스코프의 시작지점부터 초기화 시점까지 let 변수 참조 x 
 ```
+
+# const
+```
+//const는 재할당이 금지되지만, 객체 타입일 경우, 객체에 대한 참조는 변경하지 못하지만, 객체의 프로퍼티는 보호되지 const const user={name:'lee'};
+user.name='kim';
+console.log(user); //{name:'kim'}
+```
+
+> 변수 선언 기본적으로 const, 변경이 필요할 땐 let. var는 es6에선 자제.
