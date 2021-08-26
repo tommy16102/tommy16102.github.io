@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Javascript 비동기"
+author: Hyemin Seo
+comments: true
+tags:
+- js
+categories:
+- Javascript
+date: 2021-08-26 14:24 +0900
+---
+
+```javascript
+동기 => 순차적 실행, 어떤 작업이 수행 중 일때 다른 작업은 대기.
+
+![동기](https://user-images.githubusercontent.com/75344562/130908248-9cff1f63-c2f3-468e-8cb2-a0d71fbf6799.png)
+
+```
