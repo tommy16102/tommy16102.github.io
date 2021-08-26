@@ -54,4 +54,5 @@ func1();
 ```
   
 ![비동기함수](https://user-images.githubusercontent.com/75344562/130909159-52fd0439-9c63-4326-9f2c-3e34b5b5b88a.png)
+
 setTime의 콜백함수 지정 시간만큼 대기 후, tick 이벤트 발생 후 실행.
