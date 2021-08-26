@@ -25,3 +25,32 @@ date: 2021-08-26 14:24 +0900
 비동기  
 ![비동기](https://user-images.githubusercontent.com/75344562/130908653-b7f6593f-2860-4a8f-bca1-9fe4aad4f9f3.png)
 
+```javascript
+//비동기
+function func1(){
+  console.log('func1');
+  func2();
+}
+
+function func2(){
+  setTimeout(function(){
+    console.log('func2');
+    },0);
+  
+  func3();
+}
+
+function func3(){
+  console.log('func3');
+}
+
+func1();
+
+//func1
+//func3
+//func2
+
+//
+```
+  
+![비동기함수](https://user-images.githubusercontent.com/75344562/130909159-52fd0439-9c63-4326-9f2c-3e34b5b5b88a.png)
