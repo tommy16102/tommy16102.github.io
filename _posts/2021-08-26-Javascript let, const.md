@@ -52,7 +52,10 @@ let b=3;
 
 # const
 ```
-//const는 재할당이 금지되지만, 객체 타입일 경우, 객체에 대한 참조는 변경하지 못하지만, 객체의 프로퍼티는 보호되지 const const user={name:'lee'};
+//const는 재할당이 금지되지만, 객체 타입일 경우 객체에 대한 참조는 변경하지 못하지만,  
+//객체의 프로퍼티는 보호되지 않음. 배열 및 Object 변경 가능.
+
+const const user={name:'lee'};
 user.name='kim';
 console.log(user); //{name:'kim'}
 ```
