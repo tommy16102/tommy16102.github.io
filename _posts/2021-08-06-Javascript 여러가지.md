@@ -7,7 +7,7 @@ tags:
 - js
 categories:
 - Javascript
-date: 2021-08-06 23:04 +0900
+date: 2021-08-29 16:04 +0900
 ---
 # 선언
 
@@ -101,4 +101,23 @@ color.forEach(color => console.log(color));
 // red
 // green
 // blue
+```
+
+# spread
+```
+//펼침 연산자.  배열을 펼침.
+
+let arr=['apple','banana','carrot'];
+let data=[...arr];
+console.log(data); ///apple banana carrot
+
+let data2=[1,2,...arr,3,4];
+console.log(data2); //1 2 apple banana carrot 3 4
+
+function sum(a,b,c){
+  return a+b+c;
+}
+
+let data3=[1,2,3];
+console.log(sum(...data3)); //6
 ```
