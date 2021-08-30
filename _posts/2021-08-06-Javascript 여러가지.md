@@ -121,3 +121,41 @@ function sum(a,b,c){
 let data3=[1,2,3];
 console.log(sum(...data3)); //6
 ```
+# destructuring
+```
+///array
+let arr = [1,3,5,7,9];
+let [first,,third] = arr;
+console.log(first, third) //1 5
+
+//object
+let obj={
+  name:'js',
+  age:55,
+  address:'seoul'
+}
+
+let{name,age}=obj;
+console.log(name,age);
+
+let{name:n, age:a}=obj;
+console.log(n,a)
+
+//eventlistener
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <div>안녕하세요</div>
+  <script>
+    document.querySelector('div').addEventListener('click',function({type,target}){
+      console.log(type,target.innerText);
+    })
+  </script>
+</body>
+</html>
+```
