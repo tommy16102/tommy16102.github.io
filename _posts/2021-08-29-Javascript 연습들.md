@@ -7,7 +7,7 @@ tags:
 - js
 categories:
 - Javascript
-date: 2021-08-29 14:24 +0900
+date: 2021-08-30 11:39 +0900
 ---
 
 1.filter, includes, from을 사용해서 문자열 'e'가 노드로 구성된 배열 만들어서 반환
