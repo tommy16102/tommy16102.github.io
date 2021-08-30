@@ -48,6 +48,7 @@ date: 2021-08-30 11:39 +0900
 ```
 
 2. 로또번호 생성기
+
 ```
 const SETTING = {
   name : 'LUCKY LOTTO!',
