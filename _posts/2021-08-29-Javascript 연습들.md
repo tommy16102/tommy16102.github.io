@@ -10,9 +10,7 @@ categories:
 date: 2021-08-29 14:24 +0900
 ---
 
-
-
-1. filter, includes, from을 사용해서 문자열 'e'가 노드로 구성된 배열 만들어서 반환
+1.filter, includes, from을 사용해서 문자열 'e'가 노드로 구성된 배열 만들어서 반환
 
 ```
 <!DOCTYPE html>
@@ -47,6 +45,29 @@ date: 2021-08-29 14:24 +0900
   </script>
 </body>
 </html>
+```
+
+2. 로또번호 생성기
+```
+const SETTING = {
+  name : 'LUCKY LOTTO!',
+  count : 6,
+  maxNumber : 45
+}
+
+const {count, maxNumber} = SETTING;
+
+const nums = new Set();
+
+function getRandomNumber(maxNumber){
+  while(nums.size<count){
+    let num = Math.floor(Math.random()*maxNumber)+1;
+    if(!nums.has(num)) nums.add(num);
+  }
+  console.log(nums);
+}
+
+getRandomNumber(maxNumber);
 ```
 
 > 모던 자바스크립트(javascript) 개발을 위한 ES6 강좌(인프런)
