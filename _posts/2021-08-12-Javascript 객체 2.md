@@ -106,20 +106,29 @@ const myHealth2 = Object.assign({},previousObj,{
 
 console.log(previousObj===myHealth2); //false 객체는 다름.
 
+
 //setPrototypeOf
+
 const healthObj = {
   showHealth : function(){
     console.log(this.healthTime);
   },
-  setHealth:function(newTime){
+  setHealth : function(newTime){
     this.healthTime = newTime;
   }
 }
 
-const newobj = Object.setPrototypeOf({
-  name:"name",
-  lastTime:"11:20"
-},healthObj);
+const healthChildObj = {
+  getAge:function(){
+    return this.age;
+  }
+}
 
-console.log(newobj);
+Object.setPrototypeOf(healthChildObj,healthObj);
+
+const childObj = Object.setPrototypeOf({
+  age:22
+},healthChildObj);
+
+console.log(childObj);
 ```
