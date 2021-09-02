@@ -7,7 +7,7 @@ tags:
 - js
 categories:
 - Javascript
-date: 2021-08-29 16:04 +0900
+date: 2021-09-02 11:20 +0900
 ---
 # 선언
 
@@ -121,6 +121,17 @@ function sum(a,b,c){
 let data3=[1,2,3];
 console.log(sum(...data3)); //6
 ```
+
+# rest parameter
+```
+//spread와는 다르게 매개변수로 ... => 배열 받음.
+
+function checkNum(...arr){
+  console.log(arr);
+}
+checkNum(10,2,3,4,5);
+```
+
 # destructuring
 ```
 ///array
