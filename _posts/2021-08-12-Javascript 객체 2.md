@@ -7,7 +7,7 @@ tags:
 - js
 categories:
 - Javascript
-date: 2021-08-12 10:24 +0900
+date: 2021-09-02 17:24 +0900
 ---
 
 ```javascript
@@ -68,4 +68,24 @@ func() //this -> window
 
 var a = {}
 func.apply(a) //this -> a
+
+
+//Object.create, assign
 ```
+var healthObj = {
+  showHealth: function(){
+    console.log("오늘 시간 : "+this.healthTime);
+    
+  }
+}
+
+onst myHealth = Object.create(healthObj);
+myHealth.name="name";
+myHealth.lastTime="11:20";
+
+const myHealth2 = Object.assign(Object.create(healthObj),{
+  name:"name",
+  lastTime:"11:20"
+});
+
+console.log(myHealth2);
