@@ -12,6 +12,8 @@ date: 2021-08-20 13:24 +0900
 
 ```javascript
 //C++, java와 유사한 class 문법
+//모습은 class지만 Function.prototype으로 다 연결됨.
+
 class Person {
     
     //생성자
