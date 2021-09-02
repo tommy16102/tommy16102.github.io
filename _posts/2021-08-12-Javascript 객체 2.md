@@ -70,6 +70,7 @@ var a = {}
 func.apply(a) //this -> a
 
 
+
 //Object.create, assign
 var healthObj = {
   showHealth: function(){
@@ -87,4 +88,38 @@ const myHealth2 = Object.assign(Object.create(healthObj),{
   lastTime:"11:20"
 });
 
+//Object assign
+const previousObj = {
+  name:"name",
+  lastTime:"11:20"
+};
+
+//previousObj에서 추출한 뒤, 새로운 값으로 대체(없으면 그대로 씀)
+const myHealth = Object.assign({},previousObj,{
+  name:"name2"
+});
+
+console.log(previousObj===myHealth); //false.
+
+const myHealth2 = Object.assign({},previousObj,{
+});
+
+console.log(previousObj===myHealth2); //false 객체는 다름.
+
+//setPrototypeOf
+const healthObj = {
+  showHealth : function(){
+    console.log(this.healthTime);
+  },
+  setHealth:function(newTime){
+    this.healthTime = newTime;
+  }
+}
+
+const newobj = Object.setPrototypeOf({
+  name:"name",
+  lastTime:"11:20"
+},healthObj);
+
+console.log(newobj);
 ```
