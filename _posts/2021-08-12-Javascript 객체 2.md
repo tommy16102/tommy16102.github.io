@@ -71,7 +71,6 @@ func.apply(a) //this -> a
 
 
 //Object.create, assign
-```
 var healthObj = {
   showHealth: function(){
     console.log("오늘 시간 : "+this.healthTime);
@@ -79,7 +78,7 @@ var healthObj = {
   }
 }
 
-onst myHealth = Object.create(healthObj);
+const myHealth = Object.create(healthObj);
 myHealth.name="name";
 myHealth.lastTime="11:20";
 
@@ -88,4 +87,4 @@ const myHealth2 = Object.assign(Object.create(healthObj),{
   lastTime:"11:20"
 });
 
-console.log(myHealth2);
+```
