@@ -87,6 +87,16 @@ node node.demo.js 실행
 파라미터로 함수를 전달받아, 함수의 내부에서 실행하는 함수=>콜백함수  
 
 미래의 특정 시점에 값을 제공 하겠다는 약속을 반환=>promise
+
+function square(a){
+  return new Promise(function(resolve){
+    setTimeout(function(){
+      resolve(a*a);
+    },500)
+  })
+}
+
+square(10).then(square).then(console.log);
 ```
 
 pending: 초기, fulfill: 수행 o, reject: 수행 x, settled: fulfill/reject but pending x
