@@ -9,6 +9,16 @@ categories:
 - Javascript
 date: 2021-09-02 08:55 +0900
 ---
+
+```javascript
+function sayHello(name){
+    console.log(`hello my name is ${name}`);
+}
+
+sayHello('minsu'); //hello my name is minsu
+sayHello('cheolsu'); //hello my name is cheolsu
+```
+
 ```javascript
 
 // template => json으로 응답을 받고, javascript object로 변환, 데이터 처리 한 뒤, DOM에 추가.
