@@ -180,3 +180,13 @@ console.log(n,a)
 </body>
 </html>
 ```
+
+# setInterval/stTimeout
+
+```
+function sayHello(){
+  console.log('hello');
+}
+setInterval(sayHello,1000); //1초 간격으로 계속 실행
+setTieout(sayHello,1000); //1초 뒤 한번 실행하고 끝.
+```
