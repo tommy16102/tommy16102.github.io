@@ -190,3 +190,11 @@ function sayHello(){
 setInterval(sayHello,1000); //1초 간격으로 계속 실행
 setTieout(sayHello,1000); //1초 뒤 한번 실행하고 끝.
 ```
+
+# JSON
+
+```
+const a = [1,2,3,4,5]
+const strA = JSON.stringify(a);  // '[1,2,3,4,5]' 배열을 문자열로
+const arrA = JSON.parse(strA);  // [1, 2, 3, 4, 5] 문자열을 다시 배열로.
+```
