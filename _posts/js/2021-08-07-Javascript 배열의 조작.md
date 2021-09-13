@@ -7,7 +7,7 @@ tags:
 - js
 categories:
 - Javascript
-date: 2021-08-07 15:04 +0900
+date: 2021-09-13 19:04 +0900
 ---
 ```javascript
 var a = ['a','b','c']
@@ -46,4 +46,15 @@ color.forEach(color => console.log(color));
 // blue
 ```
 
+# filter
+```
+///배열 내 원소를 대상으로 함수 내 true return하는 원소만 남김.
+
+function Filter() {return true;}
+[1,2,3,4].filter(Filter) //[1,2,3,4]
+
+function Filter2(i){
+    return i>2;
+}
+[1,2,3,4,5].filter(Filter2) //[3,4,5]
 ```
