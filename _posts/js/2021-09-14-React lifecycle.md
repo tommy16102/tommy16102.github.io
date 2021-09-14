@@ -57,3 +57,5 @@ class App extends React.Component{
 export default App;
 
 ```
+
+> constructor() => render() => componentDidMount() => componentDidUpdate() => componentWilUnmount()
