@@ -7,7 +7,7 @@ tags:
 - js
 categories:
 - Javascript
-date: 2021-08-26 14:24 +0900
+date: 2021-09-14 14:24 +0900
 ---
 
 ```javascript
@@ -56,3 +56,16 @@ func1();
 ![비동기함수](https://user-images.githubusercontent.com/75344562/130909159-52fd0439-9c63-4326-9f2c-3e34b5b5b88a.png)
 
 setTime의 콜백함수 지정 시간만큼 대기 후, tick 이벤트 발생 후 실행.
+
+# ayns/await
+
+```
+//ES6. 함수 async 선언.(항상 Promise를 반환)
+//함수 내부의 await 키워드는 함수 내부의 Promise를 반환하는 비동기 함수 앞에 사용.
+// => 동기 처리와 동일한 흐름으로 코드를 작성가능.
+
+getMovies = async () =>{
+    const movies = await axios.get("https://yts-proxy.nomadcoders1.now.sh/list_movies.json");
+};
+  
+```
