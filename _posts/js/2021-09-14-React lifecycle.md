@@ -14,7 +14,7 @@ date: 2021-09-14 15:55 +0900
 
 import React from 'react'
 
-//class component.
+//class component(state 필요x -> function component.)
 class App extends React.Component{
   constructor(props){
     super(props);
