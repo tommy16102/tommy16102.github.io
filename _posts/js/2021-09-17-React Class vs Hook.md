@@ -111,11 +111,9 @@ const Gugudan = ()=>{
     //class -> className, for -> htmlFor
 }
 ```
-
+<br/><br/>
 #### State : (setState(Class) useState(Hook))  
 #### 속도 : Class > Hook (Hook은 State가 바뀔 시 위의 예시 코드에서 함수 전체가 실행이 된다.)  
 #### 코드 : 길이 Class < Hook (위의 예시코드에서도 Hook 코드가 짧으며, 코드의 양이 많아질수록 Hook의 코드가 짧아진다.)  
-  
-  
-  
-> 참조 : [인프런 웹 게임을 만들며 배우는 React](https://www.inflearn.com/course/web-game-react) 
+<br/><br/><br/><br/><br/><br/>
+##### 참조 : [인프런 웹 게임을 만들며 배우는 React](https://www.inflearn.com/course/web-game-react) 
