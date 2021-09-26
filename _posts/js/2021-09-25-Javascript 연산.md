@@ -35,3 +35,16 @@ null => 0, undefined => NaN
 null == 0 // true
 undefined == 0 //false
 ```
+
+## null 병합 연산자 ??
+```
+let firstName = null;
+let lastName = null;
+let nickName = "바이올렛";
+
+// null이나 undefined가 아닌 첫 번째 피연산자
+alert(firstName ?? lastName ?? nickName ?? "익명의 사용자"); // 바이올렛
+
+||는 첫 번째 truthy 값을 반환합니다.
+??는 첫 번째 정의된(defined) 값을 반환합니다.
+```
