@@ -44,6 +44,21 @@ document.write() -> 화면 출력
 
 ```
 
+# 화살표 함수 this
+```
+화살표 함수에서 this를 참조하면, 화살표 함수가 아닌 ‘평범한’ 외부 함수에서 this 값을 가져온다.
+
+let user = {
+  firstName: "보라",
+  sayHi() {
+    let arrow = () => alert(this.firstName);
+    arrow();
+  }
+};
+
+user.sayHi(); // 보라
+```
+
 # 모듈화
 
 hi.js
