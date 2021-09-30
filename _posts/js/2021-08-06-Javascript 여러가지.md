@@ -7,7 +7,7 @@ tags:
 - js
 categories:
 - Javascript
-date: 2021-09-30 15:15 +0900
+date: 2021-09-30 23:15 +0900
 ---
 # 선언
 
@@ -69,6 +69,29 @@ let user={
     print:()=>{console.log(this);}
 }
 user.print() //window    화살표함수를 통해 this는 외부의 window 객체.
+```
+
+# toString/valueOf
+```
+let user = {
+  name: "John",
+  money: 1000,
+
+  // hint가 "string"인 경우
+  toString() {
+    return `{name: "${this.name}"}`;
+  },
+
+  // hint가 "number"나 "default"인 경우
+  valueOf() {
+    return this.money;
+  }
+
+};
+
+alert(user); // toString -> {name: "John"}
+alert(+user); // valueOf -> 1000
+alert(user + 500); // valueOf -> 1500
 ```
 
 # 모듈화
