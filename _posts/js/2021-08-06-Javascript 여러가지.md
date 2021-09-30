@@ -7,7 +7,7 @@ tags:
 - js
 categories:
 - Javascript
-date: 2021-09-13 15:30 +0900
+date: 2021-09-30 15:15 +0900
 ---
 # 선언
 
@@ -57,6 +57,18 @@ let user = {
 };
 
 user.sayHi(); // 보라
+
+let user={
+    name:'hyemin',
+    print:()=>{console.log(user.name);}
+}
+uesr.print() //hyemin.    화살표함수를 통해 외부로 나옴?.
+
+let user={
+    name:'hyemin',
+    print:()=>{console.log(this);}
+}
+user.print() //window    화살표함수를 통해 this는 외부의 window 객체.
 ```
 
 # 모듈화
