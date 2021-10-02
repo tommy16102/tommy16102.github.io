@@ -7,7 +7,7 @@ tags:
 - js
 categories:
 - Javascript
-date: 2021-09-14 15:55 +0900
+date: 2021-10-3 12:25 +0900
 ---
 
 ```javascript
@@ -59,3 +59,30 @@ export default App;
 ```
 
 > constructor() => render() => componentDidMount() => componentDidUpdate() => componentWilUnmount()
+
+
+#### shouldComponentUpdate
+```
+import React, {Component} from 'react'
+
+class Text extends Compoent{
+  state={
+    counter:0,
+  };
+  
+  shouldComponentUpdate(nextProps, nextState, nextContext){ //값이 달라질때만 rendering => 최적화
+    if(this.state.counter!==nextState.counter) return true;
+    return false;
+  }
+  
+  onClick=()=>{ this.setState({ }) }; //setState를 통해 값이 안바뀌어도 rendering
+  
+  render(){
+    return(
+      <div>
+        <button onClick={this.onClick}></button>
+      </div>
+    )
+  }
+}
+```
