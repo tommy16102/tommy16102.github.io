@@ -53,6 +53,26 @@ color.forEach(color => console.log(color));
 // red
 // green
 // blue
+
+["Bilbo", "Gandalf", "Nazgul"].forEach((item, index, array) => {
+  alert(`${item} is at index ${index} in ${array}`);
+});
+//Bilbo is at index 0 in Bilbo,Gandalf,Nazgul
+//Gandalf is at index 1 in Bilbo,Gandalf,Nazgul
+//Nazgul is at index 2 in Bilbo,Gandalf,Nazgul
+```
+
+# find
+```
+let users = [
+  {id: 1, name: "John"},
+  {id: 2, name: "Pete"},
+  {id: 3, name: "Mary"}
+];
+
+let user = users.find(item => item.id == 1);
+
+alert(user.name); // John
 ```
 
 # filter
