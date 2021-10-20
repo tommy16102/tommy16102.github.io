@@ -78,6 +78,6 @@ export default Counter;
 
 ### useReducer vs useState
 
-> 컴포넌트에서 관리하는 값이 딱 하나고, 그 값이 단순한 숫자, 문자열 boolean => useState
-> 관리하는 값 여러개, 상태, 구조 복잡 => useReducer
+> 컴포넌트에서 관리하는 값이 딱 하나고, 그 값이 단순한 숫자, 문자열 boolean => useState  
+> 관리하는 값 여러개, 상태, 구조 복잡 => useReducer  
 
