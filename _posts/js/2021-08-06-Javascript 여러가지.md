@@ -7,7 +7,7 @@ tags:
 - js
 categories:
 - Javascript
-date: 2021-09-30 23:15 +0900
+date: 2021-10-22 21:45 +0900
 ---
 # 선언
 
@@ -229,6 +229,29 @@ console.log(n,a)
   </script>
 </body>
 </html>
+```
+
+# nested destructuring
+
+```
+let options = {
+  size: {
+    width: 100,
+    height: 200
+  },
+  items: ["Cake", "Donut"],
+  extra: true
+};
+
+let {
+  size: { // size는 여기,
+    width,
+    height
+  },
+  items: [item1, item2], 
+} = options;
+
+console.log(width, height, item1, item2) //100 200 Cake Donut
 ```
 
 # setInterval/stTimeout
