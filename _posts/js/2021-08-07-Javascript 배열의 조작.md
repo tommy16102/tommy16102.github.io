@@ -7,7 +7,7 @@ tags:
 - js
 categories:
 - Javascript
-date: 2021-09-13 19:04 +0900
+date: 2021-12-20 15:55 +0900
 ---
 ```javascript
 var a = ['a','b','c']
@@ -88,3 +88,23 @@ function Filter2(i){
 [1,2,3,4,5].filter(Filter2) //[3,4,5]
 [1,2,3,4,5].filter(i=>i>2) //[3,4,5]
 ```
+
+# reducer
+```
+///배열 내 요소 돌면서 반복 작업 수행(forEach, for, for...of) + 값 하나 도출
+//accumulator : 이전 함수의 호출 결과. 초기값은 initial
+
+let value = arr.reduce(function(accumulator, item, index, array) { }, [initial]);
+
+let arr = [3, 5, 1, 2, 4];
+
+let sum = arr.reduce((sum, item) => sum + item, 0);
+//sum 0->3->8->9->11->15
+
+//initial X -> 배열의 첫 번째 요소를 초기값으로 사용 + 두 번째 요소부터 함수 호출.
+let result = arr.reduce((sum, item) => sum + item);
+
+```
+
+
+
