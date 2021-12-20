@@ -37,6 +37,9 @@ a.shift() // ['c','b','e','d']
 a.pop() // ['c','b','e']
 
 a.sort() // ['b','c','e']
+a.sort((a, b) => a - b) //오름차순
+a.sort((a, b) => b - a) //
+
 
 a.reverse() // ['e','c','b']
 
