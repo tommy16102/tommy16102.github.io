@@ -6,7 +6,7 @@ comments: true
 tags:
 - js
 categories:
-- Javascript
+- React
 date: 2021-09-17 08:55 +0900
 ---
 
