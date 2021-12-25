@@ -12,6 +12,7 @@ date: 2021-12-25 16:8 +0900
 
 ### 구조 분해 할당  
 > 객체나 배열을 변수로 분해    
+  
 ***  
 
 ## 배열
@@ -42,7 +43,9 @@ let [name1, name2, ...rest] = ["Julius", "Caesar", "abc", "Roma"];
 console.log(rest);
 ```
 
-***
+***  
+  
+  
 ## 객체 
 > let {var1, var2} = {var1:..., var2:...}  
 
