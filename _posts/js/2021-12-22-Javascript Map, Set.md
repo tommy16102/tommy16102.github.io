@@ -68,7 +68,7 @@ let obj2 = Object.fromEntries([ ['banana', 100] ]); //Map을 객체로
  ## Set  
 중복 허용하지 않는 값을 모아놓은 컬렉션.  
   
-주요 메서드 1  
+주요 메서드  
 ```javascript
 let set = new Set();
 
