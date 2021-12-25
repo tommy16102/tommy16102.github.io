@@ -192,68 +192,6 @@ function checkNum(...arr){
 checkNum(10,2,3,4,5);
 ```
 
-# destructuring
-```
-///array
-let arr = [1,3,5,7,9];
-let [first,,third] = arr;
-console.log(first, third) //1 5
-
-//object
-let obj={
-  name:'js',
-  age:55,
-  address:'seoul'
-}
-
-let{name,age}=obj;
-console.log(name,age);
-
-let{name:n, age:a}=obj;
-console.log(n,a)
-
-//eventlistener
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
-</head>
-<body>
-  <div>안녕하세요</div>
-  <script>
-    document.querySelector('div').addEventListener('click',function({type,target}){
-      console.log(type,target.innerText);
-    })
-  </script>
-</body>
-</html>
-```
-
-# nested destructuring
-
-```
-let options = {
-  size: {
-    width: 100,
-    height: 200
-  },
-  items: ["Cake", "Donut"],
-  extra: true
-};
-
-let {
-  size: { // size는 여기,
-    width,
-    height
-  },
-  items: [item1, item2], 
-} = options;
-
-console.log(width, height, item1, item2) //100 200 Cake Donut
-```
-
 # setInterval/stTimeout
 
 ```
