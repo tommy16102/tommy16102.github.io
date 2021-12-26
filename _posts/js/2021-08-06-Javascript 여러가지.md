@@ -7,7 +7,7 @@ tags:
 - js
 categories:
 - Javascript
-date: 2021-10-22 21:45 +0900
+date: 2021-12-26 20:45 +0900
 ---
 # 선언
 
@@ -161,35 +161,6 @@ color.forEach(color => console.log(color));
 // red
 // green
 // blue
-```
-
-# spread
-```
-//펼침 연산자.  배열을 펼침.
-
-let arr=['apple','banana','carrot'];
-let data=[...arr];
-console.log(data); ///apple banana carrot
-
-let data2=[1,2,...arr,3,4];
-console.log(data2); //1 2 apple banana carrot 3 4
-
-function sum(a,b,c){
-  return a+b+c;
-}
-
-let data3=[1,2,3];
-console.log(sum(...data3)); //6
-```
-
-# rest parameter
-```
-//spread와는 다르게 매개변수로 ... => 배열 받음.
-
-function checkNum(...arr){
-  console.log(arr);
-}
-checkNum(10,2,3,4,5);
 ```
 
 # setInterval/stTimeout
