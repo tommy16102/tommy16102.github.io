@@ -76,7 +76,9 @@ console.log(rest); //{age:30, home:"Seoul"}
 ```
 
 #### 중첩 구조분해  
-> 객체나 배열이 다른 객체나 배열 포함하는 경우
+
+> 객체나 배열이 다른 객체나 배열 포함하는 경우  
+
 ```javascript
 let options = {
   size: {
