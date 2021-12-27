@@ -16,6 +16,8 @@ date: 2021-12-27 20:59 +0900
 
 ***
 
+  
+  
 ### setTimeout
 
 ```javascript
@@ -35,7 +37,9 @@ setTimeout(sayHi, 10000, "Hyemin");
 ```
 
 ***  
-
+  
+  
+  
 ## setInterval 
 
 ```javascript
@@ -44,7 +48,9 @@ timer(); //1초마다 째깍 출력.
 ```
 
 *** 
-
+  
+   
+   
 ## 중첩 setTimeout  
 setInterval 사용안하고 일정 간격두고 실행.  
 
