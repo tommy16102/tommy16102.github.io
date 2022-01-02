@@ -68,7 +68,48 @@ rabbit.hasOwnProperty('jumps'); //true
 ```
 
 ## 함수의 prototype  
-> new 
+> new 연산자를 사용해 만든 객체는  
+> 생성자 함수의 프로토타입 정보를 사용해 [[Prototype]] 설정  
+> F.prototype 프로퍼티는 new F를 호출할 때 만들어지는 새로운 객체의 [[Prototype]]을 할당.  
 
+```javascript
+let animal = {
+  eats: true
+};
 
+function Rabbit(name) {
+  this.name = name;
+}
 
+//new Rabbit을 호출해 만든 새로운 객체의 [[Prototype]]을 animal로 설정.
+Rabbit.prototype = animal;
+let rabbit = new Rabbit("토끼");
+rabbit.eats; //true
+```
+
+### constructor
+> 디폴트 프로퍼티 prototype은 constructor 프로퍼티 하나만 있으며,  
+> 함수 자신을 가리킴.  
+
+```javascript
+function Rabbit() {}
+//Rabbit.prototype = { constructor: Rabbit}
+
+let rabbit = new Rabbit(); //{constructor: Rabbit}을 상속받음
+rabit.constructor == Rabbit; //true
+``` 
+
+```javascript
+function Rabbit() {}
+Rabbit.prototype = { jumps: true}
+let rabbit = new Rabbit();
+rabbit.constructor === Rabbit; //false. prototype전체를 덮어쓰면서 constructor X
+
+//constructor 다시 사용하기 위해
+//수동으로 다시 constructor 만들어줌.
+Rabbit.prototype = {
+  jumps: true,
+  constructor: Rabbit
+}
+
+```
