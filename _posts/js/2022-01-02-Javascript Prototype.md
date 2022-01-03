@@ -16,7 +16,7 @@ null이나 다른 객체를 참조.
 다른 객체를 참조하는 경우 참조 대상은 프로토타입.  
 Object에서 프로퍼티를 읽을 때, 해당 프로퍼티가 없으면 자동으로 프로토타입에서 프로퍼티 찾음.  
 
-## /_/_proto/_/_  
+## \__proto\__  
 > [[Prototype]]의 getter이자 setter  
 
 ```javascript
@@ -32,9 +32,8 @@ console.log(rabbit.eats); //rabbit에는 eats프로퍼티가 없으므로 [[Prot
 ```
 rabbit의 프로토타입은 animal.  
 rabbit에서는 animal에서 구현된 프로퍼티와 메서드를 사용가능.  
-
-
-
+<br/>
+<br/>
 ```javascript
 let animal = {
   eats: true,
