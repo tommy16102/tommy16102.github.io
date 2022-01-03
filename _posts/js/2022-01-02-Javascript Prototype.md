@@ -115,3 +115,19 @@ Rabbit.prototype = {
 }
 
 ```
+
+## 프로토타입 메서드  
+- Object.create(proto, [descriptors]) : [[Prototype]]이 proto 참조하는 객체 생성.  
+- Object.getPrototypeOf(obj) : obj의 [[Prototype]] 반환.  
+- Object.setPrototypeOf(obj, proto) : obj의 [[Prototype]]을 proto로 설정.   
+
+```javascript
+let animal = {
+  eats: true
+};
+
+let rabbit = Object.create(animal);
+rabbit.eats; //true
+Object.getPrototypeof(rabibit) === animal; //true
+```
+
