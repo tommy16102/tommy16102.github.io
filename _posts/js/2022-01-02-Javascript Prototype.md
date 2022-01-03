@@ -16,7 +16,7 @@ null이나 다른 객체를 참조.
 다른 객체를 참조하는 경우 참조 대상은 프로토타입.  
 Object에서 프로퍼티를 읽을 때, 해당 프로퍼티가 없으면 자동으로 프로토타입에서 프로퍼티 찾음.  
 
-## \__proto\__  
+## \_\_proto\_\_  
 > [[Prototype]]의 getter이자 setter  
 
 ```javascript
