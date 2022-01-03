@@ -68,7 +68,8 @@ rabbit.hasOwnProperty('eats'); //false
 rabbit.hasOwnProperty('jumps'); //true
 ```
 ***  
-<br/> 
+<br/>  
+
 ## 함수의 prototype  
 > new 연산자를 사용해 만든 객체는  
 > 생성자 함수의 프로토타입 정보를 사용해 [[Prototype]] 설정  
