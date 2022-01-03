@@ -33,7 +33,7 @@ console.log(rabbit.eats); //rabbit에는 eats프로퍼티가 없으므로 [[Prot
 rabbit의 프로토타입은 animal.  
 rabbit에서는 animal에서 구현된 프로퍼티와 메서드를 사용가능.  
 <br/>
-<br/>
+
 ```javascript
 let animal = {
   eats: true,
@@ -67,9 +67,8 @@ for(let prop in rabbit) //jumps, eats
 rabbit.hasOwnProperty('eats'); //false
 rabbit.hasOwnProperty('jumps'); //true
 ```
-
 ***
-
+<br/>
 ## 함수의 prototype  
 > new 연산자를 사용해 만든 객체는  
 > 생성자 함수의 프로토타입 정보를 사용해 [[Prototype]] 설정  
