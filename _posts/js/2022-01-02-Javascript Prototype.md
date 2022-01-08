@@ -11,13 +11,13 @@ date: 2022-01-02 19:00 +0900
 ---
 
 ## [[Prototype]]  
-숨김 프로퍼티.    
-null이나 다른 객체를 참조.  
-다른 객체를 참조하는 경우 참조 대상은 프로토타입.  
-Object에서 프로퍼티를 읽을 때, 해당 프로퍼티가 없으면 자동으로 프로토타입에서 프로퍼티 찾음.  
+- 숨김 프로퍼티.    
+- null이나 다른 객체를 참조.  
+- 다른 객체를 참조하는 경우 참조 대상은 프로토타입.  
+- Object에서 프로퍼티를 읽을 때, 해당 프로퍼티가 없으면 자동으로 프로토타입에서 프로퍼티 찾음.  
 
 ## \_\_proto\_\_  
-> [[Prototype]]의 getter이자 setter  
+- [[Prototype]]의 getter이자 setter  
 
 ```javascript
 let animal = {
@@ -70,9 +70,9 @@ rabbit.hasOwnProperty('jumps'); //true
 ***  
 
 ## 함수의 prototype  
-> new 연산자를 사용해 만든 객체는  
-> 생성자 함수의 프로토타입 정보를 사용해 [[Prototype]] 설정  
-> F.prototype 프로퍼티는 new F를 호출할 때 만들어지는 새로운 객체의 [[Prototype]]을 할당.  
+- new 연산자를 사용해 만든 객체는  
+- 생성자 함수의 프로토타입 정보를 사용해 [[Prototype]] 설정  
+- F.prototype 프로퍼티는 new F를 호출할 때 만들어지는 새로운 객체의 [[Prototype]]을 할당.  
 
 ```javascript
 let animal = {
@@ -90,8 +90,8 @@ rabbit.eats; //true
 ```
   
 ### constructor
-> 디폴트 프로퍼티 prototype은 constructor 프로퍼티 하나만 있으며,  
-> 함수 자신을 가리킴.  
+- 디폴트 프로퍼티 prototype은 constructor 프로퍼티 하나만 있으며,  
+- 함수 자신을 가리킴.  
 
 ```javascript
 function Rabbit() {}
