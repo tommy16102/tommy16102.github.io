@@ -48,7 +48,7 @@ class User {
 }
 ```
 
-***
+***  
 
 ## 상속 extends
 - 클래스를 다른 클래스로 확장.  
@@ -141,9 +141,9 @@ console.log(Rabbit.planet); //지구
 rabbits.sort(Rabbit.compare); //정렬
 ```
 
-***  
+***    
 <br/>
-***  
+***    
 ## protected/private  
 - protected는 클래스 자신과 자손 클래스에서만 접근 허용.  
 - protected는 프로퍼티 명 앞에 \_ 붙임.
@@ -179,9 +179,9 @@ let machine = CoffeeMachine();
 machine.water; //접근 불가
 machine.checkWater(10); //접근 불가
 ```
-***  
+***   
 <br/>
-***  
+***   
 ## instanceof  
 - 객체가 특정 클래스에 속하는지 아닌지 확인.  
 - obj instanceof Class  
