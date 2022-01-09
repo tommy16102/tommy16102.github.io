@@ -142,7 +142,9 @@ rabbits.sort(Rabbit.compare); //정렬
 ```
 
 ***    
-<br/>
+
+
+
 ***    
 ## protected/private  
 - protected는 클래스 자신과 자손 클래스에서만 접근 허용.  
@@ -180,12 +182,14 @@ machine.water; //접근 불가
 machine.checkWater(10); //접근 불가
 ```
 ***   
-<br/>
+
+
+
 ***   
 ## instanceof  
-- 객체가 특정 클래스에 속하는지 아닌지 확인.  
-- obj instanceof Class  
-- obj가 Class에 속하거나 Class를 상속받는 클래스에 속할 시 true.  
+- 객체가 특정 클래스에 속하는지 아닌지 확인.   
+- obj instanceof Class   
+- obj가 Class에 속하거나 Class를 상속받는 클래스에 속할 시 true.   
 ```javascript
 class Rabbit {}
 let rabbit = new Rabbit();
