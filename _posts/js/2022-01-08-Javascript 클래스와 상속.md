@@ -7,7 +7,7 @@ tags:
 - js
 categories:
 - Javascript
-date: 2022-01-08 22:40 +0900
+date: 2022-01-09 18:40 +0900
 ---
 
 ## 클래스  
@@ -99,6 +99,109 @@ class Rabbit extends Animal {
 ```
 - 상속 클래스의 생성자에선 반드시 this를 사용하기 전에 super(...) 호출.  
 - super를 호출해서 부모 생성자를 실행해야 빈 객체를 만들고 this에 이 객체를 할당.   
+
+***  
+<br/>
+***  
+## 정적 메서드, 정적 프로퍼티  
+- 정적 메서드 : prototype이 아닌 클래스 함수 자체에 메서드 설정.  
+- 정적 프로퍼티 : static이 붙은 프로퍼티.  
+
+```javascript
+class User {
+  static staticMethod() {
+    console.log(this === User);
+  }
+}
+User.staticMethod(); //this는 클래스 생성자인 User자체가 됨.
+
+class Article {
+  static publisher = "Ilya";
+}
+console.log(Article.publisher); //Ilya
+```
+- 모두 상속됨.  
+
+```javascript
+class Animal {
+  static planet = "지구";
+  static compare(animalA, animalB) {
+    return animalA.speed - animalB.speed;
+  }
+}
+
+class Rabbit extends Animal { }
+
+let rabbits = [
+  new Rabbit("흰토끼", 20);
+  new Rabbit("검토끼", 10);
+}
+
+console.log(Rabbit.planet); //지구
+rabbits.sort(Rabbit.compare); //정렬
+```
+
+***  
+<br/>
+***  
+## protected/private  
+- protected는 클래스 자신과 자손 클래스에서만 접근 허용.  
+- protected는 프로퍼티 명 앞에 \_ 붙임.
+- private는 클래스 내부에서만 접근 허용.    
+- private는 프로퍼티 명 앞에 \# 붙임.  
+```javascript
+//Protected
+class CoffeeMachine {
+  _waterAmount = 0;
+  
+  set waterAmount(value) {
+    this._waterAmount = value;
+  }
+  
+  get waterAmount() {
+    return _waterAmount;
+  }
+}
+
+let machine = new CoffeeMachine();
+machine.waterAmount = 100;
+```
+
+```javascript
+//private
+class CoffeeMachine {
+  #water = 200;
+  #checkWater(value) {
+    if (value < 0) throw new Error("물 부족");
+  }
+}
+let machine = CoffeeMachine();
+machine.water; //접근 불가
+machine.checkWater(10); //접근 불가
+```
+***  
+<br/>
+***  
+## instanceof  
+- 객체가 특정 클래스에 속하는지 아닌지 확인.  
+- obj instanceof Class  
+- obj가 Class에 속하거나 Class를 상속받는 클래스에 속할 시 true.  
+```javascript
+class Rabbit {}
+let rabbit = new Rabbit();
+rabbit instanceof Rabbit; //true
+```
+- Class.prototype이 obj 프로토타입 체인 상의 프로토타입 중 하나와 일치하는 지 확인.  
+```javascript
+obj.__proto__ === Class.prototype?
+obj.__proto__.__proto__ === Class.prototype?
+obj.__proto__.__proto__.__proto__ === Class.prototype?
+...
+//하나라도 true이면 true반환.
+//체인의 끝에 도달하면 false 반환
+```
+
+
 
 
 
