@@ -101,8 +101,8 @@ class Rabbit extends Animal {
 - super를 호출해서 부모 생성자를 실행해야 빈 객체를 만들고 this에 이 객체를 할당.   
 
 ***  
-<br/>
-***  
+
+
 ## 정적 메서드, 정적 프로퍼티  
 - 정적 메서드 : prototype이 아닌 클래스 함수 자체에 메서드 설정.  
 - 정적 프로퍼티 : static이 붙은 프로퍼티.  
@@ -143,9 +143,7 @@ rabbits.sort(Rabbit.compare); //정렬
 
 ***    
 
-
-
-***    
+  
 ## protected/private  
 - protected는 클래스 자신과 자손 클래스에서만 접근 허용.  
 - protected는 프로퍼티 명 앞에 \_ 붙임.
@@ -185,7 +183,6 @@ machine.checkWater(10); //접근 불가
 
 
 
-***   
 ## instanceof  
 - 객체가 특정 클래스에 속하는지 아닌지 확인.   
 - obj instanceof Class   
