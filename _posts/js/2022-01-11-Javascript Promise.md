@@ -23,7 +23,7 @@ let promise = new Promise(function(resolve, reject) {
 - new Promise 생성자가 반환하는 promise객체는 state와 result 프로퍼티를 가짐.  
   - state : pending -> fulfilled(resolve)/rejected(reject).  
   - result : undefined -> value/error.  
-- ![image](https://user-images.githubusercontent.com/75344562/148929279-82c3711c-6177-4ecc-a7aa-a5f43eb5f4df.png)  
+![image](https://user-images.githubusercontent.com/75344562/148929279-82c3711c-6177-4ecc-a7aa-a5f43eb5f4df.png)  
 
 
 ```javascript
