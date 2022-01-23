@@ -145,9 +145,10 @@ int main() {
 
 # Upper_Bound/Lower_Bound  
 - 이진탐색으로 구현.  
-- upper_bound : 찾으려는 key보다 같거나 큰 숫자가 몇 번째에 처음으로 등장하는 지.  
-- lower_bound : 찾으려는 key보다 같거나 작은 숫자가 몇 번째에 처음으로 등장하는 지.  
-```cpp
+- upper_bound : 찾으려는 key보다 같거나 큰 숫자가 몇 번째에 처음으로 등장.  
+- lower_bound : 찾으려는 key보다 같거나 작은 숫자가 몇 번째에 처음으로 등장.  
+
+```
 
 int main() {
 	vector<int> v = { 3, 5, 4, 1 }, org = { 3,5,4,1 };
