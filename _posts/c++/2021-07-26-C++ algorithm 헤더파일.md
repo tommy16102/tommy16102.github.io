@@ -7,7 +7,7 @@ tags:
 - algorithm
 categories:
 - C++
-date: 2021-07-26 12:53 +0900
+date: 2022-01-23 13:03 +0900
 ---
 
 
@@ -142,3 +142,27 @@ int main() {
 ```
 
 
+
+# Upper_Bound/Lower_Bound  
+- 이진탐색으로 구현.  
+- upper_bound : 찾으려는 key보다 같거나 큰 숫자가 몇 번째에 처음으로 등장하는 지.  
+- lower_bound : 찾으려는 key보다 같거나 작은 숫자가 몇 번째에 처음으로 등장하는 지.  
+```cpp
+
+int main() {
+	vector<int> v = { 3, 5, 4, 1 }, org = { 3,5,4,1 };
+	sort(v.begin(), v.end());
+  
+  //1 3 2 0
+	for (int i = 0;i < 4;i++) {
+		cout << lower_bound(v.begin(), v.end(), org[i]) - v.begin() << ' '; 
+	}
+	
+  //2 4 3 1
+	for (int i = 0;i < 4;i++) {
+		cout << upper_bound(v.begin(), v.end(), org[i]) - v.begin() << ' '; 
+	}
+  
+}
+
+```
