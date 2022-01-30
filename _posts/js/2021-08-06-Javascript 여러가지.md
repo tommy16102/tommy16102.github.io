@@ -7,42 +7,8 @@ tags:
 - js
 categories:
 - Javascript
-date: 2021-12-26 20:45 +0900
+date: 2022-01-30 20:45 +0900
 ---
-# 선언
-
-```
-var //지역 및 전역
-
-let //블록범위 지역변수
-
-const //블록범위 읽기 전용 상수
-
-var <-> let,const
-
-ex)
-var x=1;
-{
- var x=2;
-}
-console.log(x); //2
-
-let x=1;
-{
- let x=2;
-}
-console.log(x); //1
-```
-
-# 기타
-```
-alert() -> 경고창
-
-prompt() -> 입력한 값 결과로
-
-document.write() -> 화면 출력
-
-```
 
 # 화살표 함수 this
 ```
@@ -153,16 +119,6 @@ pending: 초기, fulfill: 수행 o, reject: 수행 x, settled: fulfill/reject bu
 
 ![화면 캡처 2021-08-25 193832](https://user-images.githubusercontent.com/75344562/130776326-408fa602-4415-4917-86f1-e1ed57ee2e2f.png)
 
-# for each
-```
-// 인자로 주어진 함수 => 배열의 각 요소에서 한번씩 실행됨.
-var colors = ['red', 'green', 'blue'];
-color.forEach(color => console.log(color));
-// red
-// green
-// blue
-```
-
 # JSON
 
 ```
@@ -170,3 +126,51 @@ const a = [1,2,3,4,5]
 const strA = JSON.stringify(a);  // '[1,2,3,4,5]' 배열을 문자열로
 const arrA = JSON.parse(strA);  // [1, 2, 3, 4, 5] 문자열을 다시 배열로.
 ```
+
+# 버블링  
+
+- 한 요소에 이벤트 발생시, 해당 요소에 할당된 핸들러 동작  
+- 이어서 부모요소의 핸들러 동작  
+- 이 과정을 최상위의 부모 만날때까지 반복.  
+
+```
+<style>
+  body * {
+    margin: 10px;
+    border: 1px solid blue;
+  }
+</style>
+
+<form onclick="alert('form')">FORM
+  <div onclick="alert('div')">DIV
+    <p onclick="alert('p')">P</p>
+  </div>
+</form>
+```
+- p 클릭시 p->div->form  
+- div 클릭시 div->form  
+- form 클릭시 form  
+
+
+# 캡처링  
+
+- 버블링과 반대  
+- 이벤트가 하위요소로 전파  
+- elem.addEventListener(..., true); 로 캡처링 단계 동작 가능 
+```
+<form>form
+  <div>div
+    <p>p</p>
+   </div>
+</form>
+
+<script>
+for(let elem of document.querySelectorAll('*')){
+  elem.addEventListener('click', e=>console.log("캡쳐링", e.tagName), true);
+  elem.addEventListener('click', e=>console.log("버블링", e.tagName));
+ }
+```
+- p 클릭 시, HTML-BODY-FORM-DIV-P 캡처링  
+- P-DIV-FORM-BODY-HTML 버블링  
+
+
