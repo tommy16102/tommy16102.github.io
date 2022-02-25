@@ -156,8 +156,9 @@ const arrA = JSON.parse(strA);  // [1, 2, 3, 4, 5] 문자열을 다시 배열로
 
 - 버블링과 반대  
 - 이벤트가 하위요소로 전파  
-- elem.addEventListener(..., true); 로 캡처링 단계 동작 가능 
-```
+- elem.addEventListener(..., true); 로 캡처링 단계 동작 가능  
+
+```html
 <form>form
   <div>div
     <p>p</p>
@@ -165,12 +166,41 @@ const arrA = JSON.parse(strA);  // [1, 2, 3, 4, 5] 문자열을 다시 배열로
 </form>
 
 <script>
-for(let elem of document.querySelectorAll('*')){
+for(let elem of document.querySelectorAll('*')) {
   elem.addEventListener('click', e=>console.log("캡쳐링", e.tagName), true);
   elem.addEventListener('click', e=>console.log("버블링", e.tagName));
- }
-```
+}
+</script>
+```  
+
 - p 클릭 시, HTML-BODY-FORM-DIV-P 캡처링  
 - P-DIV-FORM-BODY-HTML 버블링  
 
+
+# 클로저  
+
+- 비공개 변수를 가질 수 있는 환경에 있는 함수.  
+- ex) Counter    
+
+```javascript
+let counter = function() {
+  let count = 0;
+  let increaseCount = function(num) {
+    count += num;
+  }
+  return {
+    increase: function() {
+      increaseCount(1);
+    },
+    show: function() {
+      console.log(count);
+    }
+  }
+}
+
+let cnt = counter(); // counter함수를 호출시, cnt 컨텍스트에 count 담긴 scope chain 생성.
+cnt.increase(); // count 접근 가능. 0+1
+cnt.increase(); // 1+1
+cnt.show(); // 2
+```
 
