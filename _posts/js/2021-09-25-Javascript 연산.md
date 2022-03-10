@@ -7,7 +7,7 @@ tags:
 - js
 categories:
 - Javascript
-date: 2021-09-25 21:40 +0900
+date: 2022-03-10 17:25 +0900
 ---
 
 ## 연산
@@ -36,7 +36,7 @@ null == 0 // true
 undefined == 0 //false
 ```
 
-## null 병합 연산자 ??
+## null 병합 연산자 ??  
 ```
 let firstName = null;
 let lastName = null;
@@ -45,6 +45,10 @@ let nickName = "바이올렛";
 // null이나 undefined가 아닌 첫 번째 피연산자
 alert(firstName ?? lastName ?? nickName ?? "익명의 사용자"); // 바이올렛
 
-||는 첫 번째 truthy 값을 반환합니다.
+let height = 0;
+height || 100; // 100. 
+height && 100; //0
+
+||는 첫 번째 truthy 값을 반환합니다. 0은 falsy로 취급합니다.
 ??는 첫 번째 정의된(defined) 값을 반환합니다.
 ```
