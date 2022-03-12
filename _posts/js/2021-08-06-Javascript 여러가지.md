@@ -9,6 +9,25 @@ categories:
 - Javascript
 date: 2022-01-30 20:45 +0900
 ---
+# this
+
+```
+메소드 내부에서 사용하면 객체에 접근 가능.
+**런타임**에 결정 => 컨텍스트에 따라 달라짐.
+
+let user = { name: "John" }
+let user2 = { name: "Jahn" }
+
+function print() {
+  console.log(this.name);
+}
+
+user.print = print;
+user2.print = print;
+
+user.print(); //John
+user2.print(); //Jahn
+```
 
 # 화살표 함수 this
 ```
