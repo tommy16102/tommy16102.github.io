@@ -19,7 +19,7 @@ a.length  //3
 
 a.push('d') // ['a','b','c','d']
 
-a.concat(['e','f']) // ['a','b','c','d','e','f']
+a.concat(['e','f']) // ['a','b','c','d','e','f'] 
 
 a.unshit('0') // [0, 'a','b','c','d','e','f']
 
@@ -50,6 +50,8 @@ a.splice(3,0,'f') //['e','c','b','f']
 
 a.slice(1,3) //['c','b'] a배열 건드리지 않고 복사본 만듦 
 ```
+concat, splice => 원본.  
+slice => 원본 X, 복사본.  
 
 # for of  
 ```javascript
