@@ -9,6 +9,9 @@ categories:
 - Javascript
 date: 2021-12-20 15:55 +0900
 ---
+
+# pop, push, shift, unshift...  
+
 ```javascript
 var a = ['a','b','c']
 
