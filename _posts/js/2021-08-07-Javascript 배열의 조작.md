@@ -7,7 +7,7 @@ tags:
 - js
 categories:
 - Javascript
-date: 2021-12-20 15:55 +0900
+date: 2022-03-17 15:52 +0900
 ---
 
 # pop, push, shift, unshift...  
@@ -50,6 +50,15 @@ a.splice(3,0,'f') //['e','c','b','f']
 
 a.slice(1,3) //['c','b'] a배열 건드리지 않고 복사본 만듦 
 ```
+
+# for of  
+```javascript
+let arr = ["빨강", "초록" ,"파랑"];
+for (let col of arr) console.log(col); //빨강 초록 파랑
+```
+for...of => 현재 요소의 인덱스 X, 값만  
+for...in => 모든 프로퍼티 대상으로 순회(length 등 필요없는 여러 프로퍼티도 순회).  사용 X!   
+
 
 # for each
 ```
