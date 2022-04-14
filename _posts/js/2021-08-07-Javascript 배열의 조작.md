@@ -120,7 +120,6 @@ let sum = arr.reduce((sum, item) => sum + item, 0);
 
 //initial X -> 배열의 첫 번째 요소를 초기값으로 사용 + 두 번째 요소부터 함수 호출.
 let result = arr.reduce((sum, item) => sum + item);
-
 ```
 
 
