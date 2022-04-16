@@ -7,7 +7,7 @@ tags:
 - js
 categories:
 - Javascript
-date: 2022-04-16 20:45 +0900
+date: 2022-04-16 15:05 +0900
 ---
 # 64비트 부동소수점  
 
