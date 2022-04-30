@@ -23,7 +23,7 @@ f().then(alert); //1
 
 ## await  
 - async 함수 안에서 작동.  
-- 
+
 ```javascript
 async function f() {
   let promise = new Promise((resolve, reject) => {
