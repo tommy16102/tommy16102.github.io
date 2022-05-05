@@ -9,17 +9,12 @@ categories:
 - Javascript
 date: 2021-08-26 19:04 +0900
 ---
-# 선언 let, const
+# 선언 let, const  
+- var : 지역 및 전역  
+- let : 볼록범위 지역변수  
+- const : 볼록범위 읽기 전용 상수  
 
 ```
-var //지역 및 전역
-
-let //블록범위 지역변수
-
-const //블록범위 읽기 전용 상수
-
-var <-> let,const
-
 ex)
 var x=1;
 {
@@ -34,21 +29,36 @@ let x=1;
 console.log(x); //1
 ```
 
-# 호이스팅
+# 호이스팅  
+- var은 선언, 초기화, 할당의 변수 생성 3단계에서 선언과 초기화가 한번에 이뤄짐.=>변수를 위한 공간 확보 후, undefined로 초기화.  
+- 반면 let은 선언, 초기화가 분리되어 있음. => 초기화는 변수 선언문에 도달했을 때 이뤄짐. 초기화 전 변수 접근->에러  
+- 스코프의 시작지점부터 초기화 시점까지 let 변수 참조 x  
 
 ```
-//선언문 -> 해당 스코프의 선두로 옮김
 console.log(a); //undefined
 var a=3;
 
-console.log(b); //error
-let b=3;
+선언문 -> 해당 스코프의 선두로 옮
+다음과 같이 호이스팅이 됨.
 
-//var은 선언,초기화,할당의 변수 생성 3단계에서 선언과 초기화가 한번에 이뤄짐.=>변수를 위한 공간 확보 후, undefined로 초기화.
-
-//반면 let은 선언, 초기화가 분리되어 있음. => 초기화는 변수 선언문에 도달했을 때 이뤄짐. 초기화 전 변수 접근->에러
-//스코프의 시작지점부터 초기화 시점까지 let 변수 참조 x 
+var a;
+console.log(a);
+a=3;
 ```
+
+### try, catch
+```
+function ex() {
+    var a = 3;
+    try {
+        throw "exception"
+    } catch(a) {
+        a = 5;
+    }
+    return a;
+}
+```
+- catch 블록 안에서만 스코프가 적용되기 때문에 a는 3.  
 
 # const
 ```
