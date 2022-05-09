@@ -131,3 +131,9 @@ rabbit.eats; //true
 Object.getPrototypeof(rabibit) === animal; //true
 ```
 
+***
+
+### 메서드 저장  
+- 인스턴스 객체에 메서드를 저장하면 인스턴스 객체당 함수가 하나씩 복사됨.  
+- 프로토타입에 메서드 저장 -> 프로토타입을 통해 모든 인스턴스에 공유.  
+
