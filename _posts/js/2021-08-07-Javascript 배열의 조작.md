@@ -7,8 +7,17 @@ tags:
 - js
 categories:
 - Javascript
-date: 2022-03-17 15:52 +0900
+date: 2022-07-04 15:59 +0900
 ---
+
+# Array.of  
+
+```javascript
+new Array(1); 길이 1인 배열 생성
+new Array(1,2,3); [1, 2, 3] 배열 생성
+Array.of(); 빈 배열 생성
+Array.of(1); [1] 배열 생성
+``` 
 
 # pop, push, shift, unshift...  
 
