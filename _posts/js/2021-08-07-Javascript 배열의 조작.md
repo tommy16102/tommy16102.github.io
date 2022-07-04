@@ -86,7 +86,10 @@ for...of => 현재 요소의 인덱스 X, 값만
 for...in => 모든 프로퍼티 대상으로 순회(length 등 필요없는 여러 프로퍼티도 순회).  사용 X!   
 
 
-# for each
+
+# 배열 이터레이터 메소드  
+
+## for each  
 ```
 // 인자로 주어진 함수 => 배열의 각 요소에서 한번씩 실행됨.
 var colors = ['red', 'green', 'blue'];
@@ -103,7 +106,10 @@ color.forEach(color => console.log(color));
 //Nazgul is at index 2 in Bilbo,Gandalf,Nazgul
 ```
 
-# find
+## find, findIndex  
+- find -> 만족하는 요소 찾기.  
+- findIndex -> 만족하는 요소의 인덱스 찾기.  
+
 ```
 let users = [
   {id: 1, name: "John"},
@@ -116,10 +122,20 @@ let user = users.find(item => item.id == 1);
 alert(user.name); // John
 ```
 
-# filter
+## map   
+- 새로운 배열을 반환, 기존 배열 수정 X.  
+- 존재하지 않는 요소(성긴배열)에서는 호출 X.
+  
 ```
-///배열 내 원소를 대상으로 함수 내 true return하는 원소만 남김.
-
+let a = [1,2,3];
+a.map(x => x * x); // [1,4,9]
+```
+  
+## filter  
+- 배열 내 원소를 대상으로 함수 내 true return하는 원소만 남김.  
+- 존재하지 않는 요소(성긴배열)에서는 호출 X.  
+  
+```javascript
 function Filter() {return true;}
 [1,2,3,4].filter(Filter) //[1,2,3,4]
 
@@ -130,11 +146,12 @@ function Filter2(i){
 [1,2,3,4,5].filter(i=>i>2) //[3,4,5]
 ```
 
-# reducer
-```
-///배열 내 요소 돌면서 반복 작업 수행(forEach, for, for...of) + 값 하나 도출
-//accumulator : 이전 함수의 호출 결과. 초기값은 initial
+## reduce  
+- 배열 내 요소 돌면서 반복 작업 수행(forEach, for, for...of) + 값 하나 도출  
+- accumulator : 이전 함수의 호출 결과. 초기값은 initial  
+- reduceRight는 오른쪽에서 왼쪽으로 진행  
 
+```
 let value = arr.reduce(function(accumulator, item, index, array) { }, [initial]);
 
 let arr = [3, 5, 1, 2, 4];
@@ -146,5 +163,11 @@ let sum = arr.reduce((sum, item) => sum + item, 0);
 let result = arr.reduce((sum, item) => sum + item);
 ```
 
+## concat  
+- 배열 병합  
+- 원래 배열의 사본 만들어 새로운 배열을 반환  
 
-
+```
+let arr = [1,2,3]
+arr.concat([4,5]); //[1,2,3,4,5]
+```
