@@ -13,11 +13,23 @@ date: 2022-07-04 15:59 +0900
 # Array.of  
 
 ```javascript
-new Array(1); 길이 1인 배열 생성
+new Array(1); 길이 1인 배열 생성(길이 설정)
 new Array(1,2,3); [1, 2, 3] 배열 생성
 Array.of(); 빈 배열 생성
-Array.of(1); [1] 배열 생성
+Array.of(1); [1] 배열 생성(배열 내 요소 설정)
 ``` 
+
+# 성긴 배열  
+
+- 인덱스가 연속적이지 않은 배열.  
+```javascript
+let a1 = []; //길이 0
+let a2 = [,]; //길이 1
+
+let arr = [1,5,6];
+delete arr[1]; //요소에 undefined 할당.
+arr //[1,,6]
+```
 
 # pop, push, shift, unshift...  
 
