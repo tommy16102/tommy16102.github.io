@@ -10,6 +10,10 @@ categories:
 date: 2022-08-19 22:10 +0900
 ---
 
+### class component
+- 함수형 component와는 다르게 state X, lifeCycle 함수 X
+- render함수 없으므로 return으로 화면 그림.
+
 ### Lifecycle
 
 ```javascript
