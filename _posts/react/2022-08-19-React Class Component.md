@@ -1,31 +1,34 @@
 ---
 layout: post
-title: "React lifecycle"
+title: "React Class Component"
 author: Hyemin Seo
 comments: true
 tags:
 - js
 categories:
 - React
-date: 2021-10-3 12:25 +0900
+date: 2022-08-19 22:10 +0900
 ---
 
-```javascript
+### Lifecycle
 
+```javascript
 import React from 'react'
 
-//class component(state 필요x -> function component.)
 class App extends React.Component{
   constructor(props){
     super(props);
     console.log('hello');
   }
-  state={
+  
+  state = {
     count:0
   };
+
   add = () => {
     this.setState(current=>({count:current.count+1})); //setState -> render function 호출
   };
+  
   remove = () => {
     this.setState(current=>({count:current.count-1})); //setState -> render function 호출
   }
@@ -55,13 +58,11 @@ class App extends React.Component{
 }
 
 export default App;
-
 ```
-
 > constructor() => render() => componentDidMount() => componentDidUpdate() => componentWilUnmount()
 
-
 #### shouldComponentUpdate
+- 값이 달라질때만 rendering => 최적화!.
 ```
 import React, {Component} from 'react'
 
@@ -70,12 +71,12 @@ class Text extends Compoent{
     counter:0,
   };
   
-  shouldComponentUpdate(nextProps, nextState, nextContext){ //값이 달라질때만 rendering => 최적화
+  shouldComponentUpdate(nextProps, nextState, nextContext){ //
     if(this.state.counter!==nextState.counter) return true;
     return false;
   }
   
-  onClick=()=>{ this.setState({ }) }; //setState를 통해 값이 안바뀌어도 rendering
+  onClick=()=>{ this.setState({ }) }; 
   
   render(){
     return(
@@ -86,3 +87,10 @@ class Text extends Compoent{
   }
 }
 ```
+
+### Component vs PureComponent
+- 두 컴포넌트 모두 props, state 변경에 따라 render 함수 호출
+- Component => 이전의 state 변숫값과 동일하더라고 변수가 같은 이름으로 생성됐다고 인식 후 render
+- PureComponent => 변숫값 동일하면 render 안함.
+  - 성능 향상 시킬 수 있음
+  - 함수형 컴포넌트에서는 Memo
